@@ -28,5 +28,23 @@
     
     *(小撇步：Windows 用戶可以寫一個 `.bat` 批次檔將此腳本包裝起來，未來只需把 Excel 檔案「拖曳」到 `.bat` 檔案上就能瞬間完成計算！)*
 
+## 2. PDF 金額支出統計 PRO MAX (PDF Expense Extractor)
+
+這是一個能初步自動分析 PDF 發票與收據的工具。
+
+### ✨ PRO MAX 功能
+*   **多層次辨識**：優先讀取 PDF 文字圖層，若發現格式不符會進入診斷模式。
+*   **加密偵測**：自動偵測密碼保護，並提供解密建議。
+*   **診斷模式**：當無法辨識金額時，會直接顯示抓取到的文字碎片，幫助您確認檔案內容。
+
+### 🚀 如何使用
+1.  **安裝依賴套件**：
+    ```bash
+    npm install pdf-parse tesseract.js pdfjs-dist
+    ```
+
+2.  **執行腳本**：
+    將 PDF 拖曳至桌面的 `PDF金額統計.bat` 即可執行。
+
 ---
-*開發狀態：第一階段開發完成 (First Stage Completed)*
+*開發狀態：PDF 工具優化完成 (PDF Optimized)*
