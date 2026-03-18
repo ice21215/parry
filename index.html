@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aegis - 智慧法規檢索分析系統</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="circles-background">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h1>Aegis <span>法規檢索系統</span></h1>
+            </div>
+            <p class="subtitle">輸入關鍵字、情境或特定物品，系統將自動解析適用法條</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="試著輸入『合梯』、『加班費』或『特休』..." autocomplete="off">
+                <button id="searchBtn">解析法規</button>
+            </div>
+            <div class="search-suggestions">
+                <span>熱門搜尋：</span>
+                <span class="tag">合梯</span>
+                <span class="tag">加班費</span>
+                <span class="tag">特別休假</span>
+                <span class="tag">資遣費</span>
+            </div>
+        </section>
+
+        <section id="resultsContainer" class="results-container hidden">
+            <!-- 結果會動態插入這裡 -->
+        </section>
+        
+        <div id="loadingIndicator" class="loading-indicator hidden">
+            <div class="spinner"></div>
+            <p>正在檢索與解析法源依據...</p>
+        </div>
+    </main>
+
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
